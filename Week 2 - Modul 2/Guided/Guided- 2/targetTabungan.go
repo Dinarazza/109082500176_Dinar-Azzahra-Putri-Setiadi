@@ -18,7 +18,6 @@ func main() {
         total = total + tabungan
     }
 
-    // Output setelah loop selesai (target tercapai)
     fmt.Printf("Selamat! Target tercapai dalam %d hari.\n", hari)
     fmt.Printf("Total tabungan Anda terkumpul: Rp%d\n", total)
 }

@@ -3,33 +3,30 @@ package main
 import "fmt"
 
 func main() {
-
-	var berat, kg, gram int
-	var biayaKg, biayaGram, total int
-
+	var totalGram int
 	fmt.Print("Masukkan total berat (gram): ")
-	fmt.Scan(&berat)
+	fmt.Scan(&totalGram)
 
-	kg = berat / 1000
-	gram = berat % 1000
+	kg := totalGram / 1000
+	sisaGram := totalGram % 1000
 
-	biayaKg = kg * 10000
+	biayaKg := kg * 10000
 
-	if kg > 10 {
-		biayaGram = 0
+	var biayaSisa int
+	if sisaGram >= 500 {
+		biayaSisa = sisaGram * 5
 	} else {
-		if gram > 500 {
-			biayaGram = gram * 5
-		} else {
-			biayaGram = gram * 15
-		}
+		biayaSisa = sisaGram * 15
 	}
 
-	total = biayaKg + biayaGram
+	if kg >= 10 {
+		biayaSisa = 0
+	}
+
+	totalBiaya := biayaKg + biayaSisa
 
 	fmt.Println("\n===== Detail Perhitungan =====")
-	fmt.Println("Detail berat :", kg, "kg +", gram, "gram")
-	fmt.Println("Detail biaya : Rp.", biayaKg, "+ Rp.", biayaGram)
-	fmt.Println("Total biaya: Rp", total)
-
+	fmt.Printf("Detail berat : %d kg + %d gram\n", kg, sisaGram)
+	fmt.Printf("Detail biaya : Rp. %d + Rp. %d\n", biayaKg, biayaSisa)
+	fmt.Printf("Total biaya: Rp %d\n", totalBiaya)
 }

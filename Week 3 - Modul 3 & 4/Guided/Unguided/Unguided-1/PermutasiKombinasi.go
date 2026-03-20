@@ -9,11 +9,9 @@ func faktorial(n int) int {
 	}
 	return hasil
 }
-
 func permutasi(n, r int) int {
 	return faktorial(n) / faktorial(n-r)
 }
-
 func kombinasi(n, r int) int {
 	return faktorial(n) / (faktorial(r) * faktorial(n-r))
 }
@@ -30,7 +28,7 @@ func main() {
 	fmt.Print("masukkan nilai d : ")
 	fmt.Scan(&d)
 
-	
+
 	fmt.Printf("hasil permutasi %d dan %d adalah : %d\n", a, c, permutasi(a, c))
 	
 	fmt.Printf("hasil kombinasi %d dan %d adalah : %d\n", a, c, kombinasi(a, c))

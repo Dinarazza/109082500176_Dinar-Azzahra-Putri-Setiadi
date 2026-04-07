@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func tanggunganHari(jumlahHari int, tujuan string) int {
 	if tujuan == "domestik" {
@@ -18,7 +21,6 @@ func tanggunganHari(jumlahHari int, tujuan string) int {
 }
 
 func biayaPerHari(jumlahMhs int, tujuan string) int {
-	// biaya domestik per mahasiswa per hari
 	makan := 2 * 35000
 	penginapan := 250000
 	uangSaku := 300000
@@ -27,34 +29,52 @@ func biayaPerHari(jumlahMhs int, tujuan string) int {
 
 	if tujuan == "domestik" {
 		return biayaDomestik * jumlahMhs
-	} else if tujuan == "mancanegara" {
+	} else {
 		return int(float64(biayaDomestik) * 1.5 * float64(jumlahMhs))
 	}
-	return 0
 }
 
-func perhitunganBiaya(jumlahMhs, lamaPerjalanan int, tujuan string, totalBiaya *float64) {
-	hariDitanggung := tanggunganHari(lamaPerjalanan, tujuan)
-	biayaHarian := biayaPerHari(jumlahMhs, tujuan)
+func perhitunganBiaya(jumlahMhs, lama int, tujuan string, total *float64) {
+	hari := tanggunganHari(lama, tujuan)
+	biaya := biayaPerHari(jumlahMhs, tujuan)
 
-	*totalBiaya = float64(hariDitanggung * biayaHarian)
+	*total = float64(hari * biaya)
+}
+
+func formatRupiah(angka float64) string {
+	return fmt.Sprintf("Rp%.0f", angka)
 }
 
 func main() {
 	var jumlah, lama int
 	var tujuan string
-	var biaya float64
+	var total float64
 
 	fmt.Print("Masukkan jumlah mahasiswa: ")
 	fmt.Scan(&jumlah)
+	if jumlah <= 0 {
+		fmt.Println("Jumlah mahasiswa harus lebih dari 0!")
+		return
+	}
 
 	fmt.Print("Masukkan lama hari study tour: ")
 	fmt.Scan(&lama)
+	if lama <= 0 {
+		fmt.Println("Lama perjalanan harus lebih dari 0!")
+		return
+	}
 
 	fmt.Print("Masukkan tujuan study tour (domestik/mancanegara): ")
 	fmt.Scan(&tujuan)
+	tujuan = strings.ToLower(tujuan)
 
-	perhitunganBiaya(jumlah, lama, tujuan, &biaya)
+	if tujuan != "domestik" && tujuan != "mancanegara" {
+		fmt.Println("Tujuan harus 'domestik' atau 'mancanegara'!")
+		return
+	}
 
-	fmt.Println(" Biaya perjalanan yang harus dikeluarkan Tel - U:", biaya)
+	perhitunganBiaya(jumlah, lama, tujuan, &total)
+
+	fmt.Println("\n=== HASIL PERHITUNGAN ===")
+	fmt.Println("Total biaya ditanggung Tel-U:", formatRupiah(total))
 }

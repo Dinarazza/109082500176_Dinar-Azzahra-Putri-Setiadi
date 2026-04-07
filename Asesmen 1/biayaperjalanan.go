@@ -48,13 +48,13 @@ func main() {
 	fmt.Print("Masukkan jumlah mahasiswa: ")
 	fmt.Scan(&jumlah)
 
-	fmt.Print("Masukkan lama perjalanan (hari): ")
+	fmt.Print("Masukkan lama hari study tour: ")
 	fmt.Scan(&lama)
 
-	fmt.Print("Masukkan tujuan (domestik/mancanegara): ")
+	fmt.Print("Masukkan tujuan study tour (domestik/mancanegara): ")
 	fmt.Scan(&tujuan)
 
 	perhitunganBiaya(jumlah, lama, tujuan, &biaya)
 
-	fmt.Println("Total biaya yang ditanggung Tel-U:", biaya)
+	fmt.Println(" Biaya perjalanan yang harus dikeluarkan Tel - U:", biaya)
 }

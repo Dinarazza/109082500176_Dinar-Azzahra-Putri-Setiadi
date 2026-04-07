@@ -30,17 +30,17 @@ func main() {
 	var mJenisKiri, mJenisKanan float64
 	var massaKiri, massaKanan float64
 
-	fmt.Print("Masukkan jari-jari tabung: ")
+	fmt.Print("Masukkan jari-jari alas tabung: ")
 	fmt.Scan(&r)
 
-	fmt.Print("Masukkan tinggi zat cair kiri: ")
+	fmt.Print("Masukkan tinggi zat cair tabung kiri: ")
 	fmt.Scan(&tKiri)
-	fmt.Print("Masukkan massa jenis kiri: ")
+	fmt.Print("Masukkan massa jenis zat cair tabung kiri: ")
 	fmt.Scan(&mJenisKiri)
 
-	fmt.Print("Masukkan tinggi zat cair kanan: ")
+	fmt.Print("Masukkan tinggi zat cair tabung kanan: ")
 	fmt.Scan(&tKanan)
-	fmt.Print("Masukkan massa jenis kanan: ")
+	fmt.Print("Masukkan massa jenis zat cair tabung kanan: ")
 	fmt.Scan(&mJenisKanan)
 
 	massaKiri = massa(r, tKiri, mJenisKiri)

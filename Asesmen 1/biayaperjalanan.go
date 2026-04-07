@@ -75,6 +75,6 @@ func main() {
 
 	perhitunganBiaya(jumlah, lama, tujuan, &total)
 
-	fmt.Println("\n=== HASIL PERHITUNGAN ===")
+	fmt.Println("\n Biaya perjalanan yang harus dikeluarkan Tel - U")
 	fmt.Println("Total biaya ditanggung Tel-U:", formatRupiah(total))
 }

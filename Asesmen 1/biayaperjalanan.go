@@ -1,4 +1,4 @@
-package mainSS
+package main
 
 import (
 	"fmt"

@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 type angka int
@@ -16,26 +17,27 @@ func main() {
 	var b Buku
 
 	fmt.Println("=== INPUT BIODATA BUKU ===")
-	
+
 	fmt.Print("Masukkan judul buku : ")
-	fmt.Scan(&b.judul)
-	
+	fmt.Scanln(&b.judul)
+
 	fmt.Print("Masukkan nama penulis : ")
-	fmt.Scan(&b.penulis)
-	
+	fmt.Scanln(&b.penulis)
+
 	fmt.Print("Masukkan penerbit : ")
-	fmt.Scan(&b.penerbit)
-	
+	fmt.Scanln(&b.penerbit)
+
 	fmt.Print("Masukkan tahun terbit : ")
-	fmt.Scan(&b.tahunTerbit)
-	
+	fmt.Scanln(&b.tahunTerbit)
+
 	fmt.Print("Masukkan jumlah halaman: ")
-	fmt.Scan(&b.jumlahHalaman)
+	fmt.Scanln(&b.jumlahHalaman)
 
 	fmt.Println("\n=== BIODATA BUKU ===")
-	fmt.Println("Judul Buku :", b.judul)
-	fmt.Println("Penulis :", b.penulis)
-	fmt.Println("Penerbit :", b.penerbit)
-	fmt.Println("Tahun Terbit :", b.tahunTerbit)
-	fmt.Println("Jumlah Halaman :", b.jumlahHalaman)
+
+	fmt.Printf("Judul Buku : %s\n", b.judul)
+	fmt.Printf("Penulis : %s\n", b.penulis)
+	fmt.Printf("Penerbit : %s\n", b.penerbit)
+	fmt.Printf("Tahun Terbit : %d\n", b.tahunTerbit)
+	fmt.Printf("Jumlah Halaman : %d\n", b.jumlahHalaman)
 }

@@ -7,7 +7,7 @@ type desimal float64
 func main() {
 	var alas, tinggi, luas desimal
 
-	fmt.Print("Masukan Pnajang Alas Segitiga: ")
+	fmt.Print("Masukan Panjang Alas Segitiga: ")
 	fmt.Scan(&alas)
 
 	fmt.Print("Masukan Tinggi Segitiga: ")

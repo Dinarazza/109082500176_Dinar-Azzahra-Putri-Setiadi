@@ -16,7 +16,7 @@ func seqSearch(arr arrData, namaBinatang string) int {
 }
 
 func main() {
-	var arrBintang arrData
+	var arrBinatang arrData
 
 	for i := 0; i < len(arrBinatang); i++ {
 		fmt.Printf("Masukan data bintang ke-%d:", i)
@@ -26,7 +26,7 @@ func main() {
 
 	var binatangCari string
 	fmt.Print("Masukan nama binatang yang mau dicari :")
-	fmt.Scan(&bintangCari)
+	fmt.Scan(&binatangCari)
 
 	var idxCari int
 	idxCari = seqSearch(arrBinatang, binatangCari)

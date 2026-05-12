@@ -5,7 +5,7 @@ import "fmt"
 type arrData [5]string
 
 func seqSearch(arr arrData, namaBintang string) int {
-	var found bool = false
+	var found int = false
 	for i := 0; i < len(arr); i++ {
 		if arr[i] == Bintangcari {
 			found = i

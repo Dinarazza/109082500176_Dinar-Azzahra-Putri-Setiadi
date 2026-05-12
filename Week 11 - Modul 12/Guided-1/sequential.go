@@ -4,10 +4,10 @@ import "fmt"
 
 type arrData [5]string
 
-func seqSearch(arr arrData, namaBintang string) int {
+func seqSearch(arr arrData, namaBinatang string) int {
 	var found int = false
 	for i := 0; i < len(arr); i++ {
-		if arr[i] == Bintangcari {
+		if arr[i] == binatangcari {
 			found = i
 			break
 		}
@@ -18,22 +18,22 @@ func seqSearch(arr arrData, namaBintang string) int {
 func main() {
 	var arrBintang arrData
 
-	for i := 0; i < len(arrBintang); i++ {
+	for i := 0; i < len(arrBinatang); i++ {
 		fmt.Printf("Masukan data bintang ke-%d:", i)
 		fmt.Scan(&arrBintang[i])
 	}
 	fmt.Println()
 
-	var bintangCari string
-	fmt.Print("Masukan nama bintang yang mau dicari :")
+	var binatangCari string
+	fmt.Print("Masukan nama binatang yang mau dicari :")
 	fmt.Scan(&bintangCari)
 
 	var idxCari int
-	idxCari = seqSearch(arrBintang, bintangCari)
+	idxCari = seqSearch(arrBinatang, binatangCari)
 
 	if idxCari > -1 {
 		fmt.Printf("Data %s ditemukan pada indeks ke-%d!", bintangCari, idxCari)
 	} else if idxCari == -1 {
-		fmt.Printf("Data %s tidak ditemukan!", bintangCari)
+		fmt.Printf("Data %s tidak ditemukan!", binatangCari)
 	}
 }

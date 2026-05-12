@@ -20,7 +20,7 @@ func main() {
 
 	for i := 0; i < len(arrBinatang); i++ {
 		fmt.Printf("Masukan data bintang ke-%d:", i)
-		fmt.Scan(&arrBintang[i])
+		fmt.Scan(&arrBinatang[i])
 	}
 	fmt.Println()
 
@@ -32,7 +32,7 @@ func main() {
 	idxCari = seqSearch(arrBinatang, binatangCari)
 
 	if idxCari > -1 {
-		fmt.Printf("Data %s ditemukan pada indeks ke-%d!", bintangCari, idxCari)
+		fmt.Printf("Data %s ditemukan pada indeks ke-%d!", binatangCari, idxCari)
 	} else if idxCari == -1 {
 		fmt.Printf("Data %s tidak ditemukan!", binatangCari)
 	}

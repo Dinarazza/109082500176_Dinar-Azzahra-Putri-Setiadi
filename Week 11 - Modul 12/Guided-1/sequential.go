@@ -9,6 +9,7 @@ func seqSearch(arr arrData, namaBintang string) int {
 	for i := 0; i < len(arr); i++ {
 		if arr[i] == Bintangcari {
 			found = i
+			break
 		}
 	}
 	return found

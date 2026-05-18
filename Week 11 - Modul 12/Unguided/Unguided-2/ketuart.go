@@ -40,13 +40,13 @@ func main() {
 
 	for i := 1; i <= 20; i++ {
 		suara := perolehanSuara[i]
-		if suara > max1 {
-			max2 = max1
+		if suara > maks1 {
+			maks2 = maks1
 			wakil = ketua
-			max1 = suara
+			maks1 = suara
 			ketua = i
-		} else if suara > max2 {
-			max2 = suara
+		} else if suara > maks2 {
+			maks2 = suara
 			wakil = i
 		}
 	}

@@ -46,21 +46,22 @@ func UrutBuku(pustaka *DaftarBuku, n int) {
 	}
 }
 
+// 4. Procedure Cetak5Terbaru
 func Cetak5Terbaru(pustaka DaftarBuku, n int) {
 	limit := 5
-	if n < 5 {	
-	if i < limit-1 {
-    fmt.Print(" ") 
-}
+	if n < 5 {
+		limit = n
+	}
 	for i := 0; i < limit; i++ {
 		fmt.Print(pustaka[i].judul)
 		if i < limit-1 {
-			fmt.Keep(" ")
+			fmt.Print(" ")
 		}
 	}
 	fmt.Println()
 }
 
+// 5. Procedure CariBuku
 func CariBuku(pustaka DaftarBuku, n int, r int) {
 	low := 0
 	high := n - 1
@@ -70,18 +71,18 @@ func CariBuku(pustaka DaftarBuku, n int, r int) {
 		mid := (low + high) / 2
 		if pustaka[mid].rating == r {
 			foundIdx = mid
-			break 
+			break
 		} else if pustaka[mid].rating < r {
-			high = mid - 1 
+			high = mid - 1
 		} else {
-			low = mid + 1 
+			low = mid + 1
 		}
 	}
 
 	if foundIdx != -1 {
 		b := pustaka[foundIdx]
 		fmt.Printf("%s %s %s %d %d %d\n", b.judul, b.penulis, b.penerbit, b.tahun, b.eksemplar, b.rating)
-	} else { 
+	} else {
 		fmt.Println("Tidak ada buku dengan rating seperti itu")
 	}
 }

@@ -8,7 +8,6 @@ func main() {
 	var input int
 	var data []int
 
-	
 	for {
 		fmt.Scan(&input)
 		if input < 0 {
@@ -17,12 +16,10 @@ func main() {
 		data = append(data, input)
 	}
 
-	
 	if len(data) == 0 {
 		return
 	}
 
-	
 	for i := 1; i < len(data); i++ {
 		key := data[i]
 		j := i - 1
@@ -41,7 +38,6 @@ func main() {
 	}
 	fmt.Println()
 
-
 	isConstant := true
 	var diff int
 
@@ -59,7 +55,7 @@ func main() {
 
 	if isConstant {
 		fmt.Printf("Data berjarak %d\n", diff)
-	} {
+	} else {
 		fmt.Println("Data berjarak tidak tetap")
 	}
 }

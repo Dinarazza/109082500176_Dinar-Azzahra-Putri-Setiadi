@@ -48,9 +48,10 @@ func UrutBuku(pustaka *DaftarBuku, n int) {
 
 func Cetak5Terbaru(pustaka DaftarBuku, n int) {
 	limit := 5
-	if n < 5 {
-		limit = n
-	}
+	if n < 5 {	
+	if i < limit-1 {
+    fmt.Print(" ") 
+}
 	for i := 0; i < limit; i++ {
 		fmt.Print(pustaka[i].judul)
 		if i < limit-1 {
@@ -80,7 +81,7 @@ func CariBuku(pustaka DaftarBuku, n int, r int) {
 	if foundIdx != -1 {
 		b := pustaka[foundIdx]
 		fmt.Printf("%s %s %s %d %d %d\n", b.judul, b.penulis, b.penerbit, b.tahun, b.eksemplar, b.rating)
-	} {
+	} else { 
 		fmt.Println("Tidak ada buku dengan rating seperti itu")
 	}
 }

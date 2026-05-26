@@ -46,7 +46,6 @@ func UrutBuku(pustaka *DaftarBuku, n int) {
 	}
 }
 
-// 4. Procedure Cetak5Terbaru
 func Cetak5Terbaru(pustaka DaftarBuku, n int) {
 	limit := 5
 	if n < 5 {
@@ -61,7 +60,6 @@ func Cetak5Terbaru(pustaka DaftarBuku, n int) {
 	fmt.Println()
 }
 
-// 5. Procedure CariBuku
 func CariBuku(pustaka DaftarBuku, n int, r int) {
 	low := 0
 	high := n - 1
